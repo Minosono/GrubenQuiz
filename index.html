@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wie woke bist du? - Das ultimative Quiz!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="quiz-wrapper">
+
+        <!-- Start Screen -->
+        <div id="start-container" class="container active">
+            <div class="content-box">
+                <h1><span class="rainbow-text">Woke</span>-O-Meter</h1>
+                <h2>Bist du bereit, deine Wokeness zu messen? 🤔</h2>
+                <p>Ein nicht ganz ernst gemeintes Quiz für dich und deine Freunde. Beantworte die Fragen und finde heraus, wie tief du im Woke-Sumpf steckst!</p>
+                <button id="start-button" class="btn btn-primary">Quiz starten!</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-container" class="container">
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+                 <span id="progress-text" class="progress-text">Frage 1 / 30</span>
+            </div>
+            <div class="content-box">
+                <h2 id="question-number">Frage X</h2>
+                <p id="question-text" class="question"></p>
+                <div id="answer-options">
+                    <!-- Antwortmöglichkeiten werden hier per JS eingefügt -->
+                </div>
+                <button id="next-button" class="btn btn-secondary" style="display: none;">Weiter</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-container" class="container">
+             <div class="content-box">
+                <h2>Dein Ergebnis:</h2>
+                <div id="result-title" class="result-title"></div>
+                <div id="result-score" class="result-score"></div>
+                <p id="result-description" class="result-description"></p>
+                <canvas id="woke-chart" width="200" height="200"></canvas> <!-- Optional: Chart -->
+                <button id="restart-button" class="btn btn-primary">Nochmal testen?</button>
+             </div>
+        </div>
+
+    </div>
+
+    <!-- Emojis im Hintergrund -->
+    <div class="emoji-background"></div>
+
+    <script type="module" src="script.js"></script>
+    <!-- Optional: Chart.js für ein Ergebnis-Diagramm -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
